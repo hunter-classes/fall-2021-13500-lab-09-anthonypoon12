@@ -24,4 +24,5 @@ TEST_CASE("create and delete"){
     CHECK(temp->x==0.1);
     CHECK(temp->y==0.2);
     CHECK(temp->z==0.3);
+    deleteCoord3D(temp);
 }

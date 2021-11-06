@@ -21,3 +21,6 @@ Coord3D* createCoord3D(double x, double y, double z){
     output->z=z;
     return output;
 }
+void deleteCoord3D(Coord3D *p){
+    delete p;
+}
