@@ -14,3 +14,10 @@ void move(Coord3D *ppos, Coord3D *pvel, double dt){
     ppos->y=ppos->y+pvel->y * dt;
     ppos->z=ppos->z+pvel->z * dt;
 }
+Coord3D* createCoord3D(double x, double y, double z){
+    Coord3D* output = new Coord3D;
+    output->x=x;
+    output->y=y;
+    output->z=z;
+    return output;
+}

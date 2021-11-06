@@ -18,3 +18,10 @@ TEST_CASE("move"){
     CHECK(pos.y==-10);
     CHECK(pos.z==100.4);
 }
+TEST_CASE("create and delete"){
+    Coord3D *temp = createCoord3D(0.1,0.2,0.3);
+    CHECK(temp!=nullptr);
+    CHECK(temp->x==0.1);
+    CHECK(temp->y==0.2);
+    CHECK(temp->z==0.3);
+}
