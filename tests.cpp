@@ -2,15 +2,20 @@
 #include "doctest.h"
 #include "funcs.h"
 Coord3D pointP = {10, 20, 30};  
-Coord3D pointP1 = {10, 20, 30};
 Coord3D pointQ = {-20, 21, -22};    
 Coord3D pos = {0, 0, 100.0};
 Coord3D vel = {1, -5, 0.2};
 TEST_CASE("lengths"){
     CHECK(length(&pointP)-37.4166<0.00001);
+    CHECK(length(&pointQ)-36.4006<0.00001);
+    CHECK(length(&pos)-100<0.00001);
+    CHECK(length(&vel)-5.10294<0.00001);
 }
 TEST_CASE("farthest"){
-    CHECK(fartherFromOrigin(&pointP1, &pointQ)==&pointP1);
+    CHECK(fartherFromOrigin(&pointP, &pointQ)==&pointP);
+    CHECK(fartherFromOrigin(&pointP, &pos)==&pos);
+    CHECK(fartherFromOrigin(&pointP, &vel)==&pointP);
+    CHECK(fartherFromOrigin(&pointQ, &pointP)==&pointP);
 }
 TEST_CASE("move"){
     move(&pos, &vel, 2.0);
