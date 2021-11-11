@@ -1,3 +1,10 @@
+/*
+Author: Anthony Poon
+Course: CSCI-135
+Instructor: Tong Yi/Mike Zamansky
+Assignment: Lab 9 funcs
+functions for Lab 9
+*/
 #include <iostream>
 #include "funcs.h"
 #include <math.h>
